@@ -1,0 +1,319 @@
+> Configure project :launcher
+WARNING: The option setting 'android.enableR8=false' is deprecated.
+It will be removed in version 5.0 of the Android Gradle plugin.
+You will no longer be able to disable R8
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Android.GradleInvokationException:ParseAndShowException ()
+UnityEditor.Android.PostProcessor.PostProcessRunner:RunAllTasks (UnityEditor.Android.PostProcessor.PostProcessorContext)
+UnityEditor.Android.PostProcessAndroidPlayer:PostProcess (UnityEditor.BuildTarget,string,string,string,string,string,string,UnityEditor.BuildOptions,UnityEditor.RuntimeClassRegistry,UnityEditor.Build.Reporting.BuildReport)
+UnityEditor.Android.AndroidBuildPostprocessor:PostProcess (UnityEditor.Modules.BuildPostProcessArgs,UnityEditor.BuildProperties&)
+UnityEditor.PostprocessBuildPlayer:Postprocess (UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,string,string,string,int,int,UnityEditor.BuildOptions,UnityEditor.RuntimeClassRegistry,UnityEditor.Build.Reporting.BuildReport)
+UnityEditor.BuildPlayerWindow/DefaultBuildMethods:BuildPlayer (UnityEditor.BuildPlayerOptions)
+UnityEditor.BuildPlayerWindow:CallBuildMethods (bool,UnityEditor.BuildOptions)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun (bool)
+UnityEditor.BuildPlayerWindow:GUIBuildButtons (UnityEditor.Modules.IBuildWindowExtension,bool,bool,bool,UnityEditor.Build.BuildPlatform)
+UnityEditor.BuildPlayerWindow:ShowBuildTargetSettings ()
+UnityEditor.BuildPlayerWindow:OnGUI ()
+UnityEditor.HostView:InvokeOnGUI (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:DrawView (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:OldOnGUI ()
+UnityEngine.UIElements.IMGUIContainer:DoOnGUI (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,bool,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUIRaw (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUI (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleEvent (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.CallbackEventHandler:HandleEventAtTargetPhase (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.MouseCaptureDispatchingStrategy:DispatchEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ApplyDispatchingStrategies (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,bool)
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ProcessEventQueue ()
+UnityEngine.UIElements.EventDispatcher:OpenGate ()
+UnityEngine.UIElements.EventDispatcherGate:Dispose ()
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:Dispatch (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.BaseVisualElementPanel:SendEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.UIElementsUtility:DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel)
+UnityEngine.UIElements.UIElementsUtility:UnityEngine.UIElements.IUIElementsUtility.ProcessEvent (int,intptr,bool&)
+UnityEngine.UIElements.UIEventRegistration:ProcessEvent (int,intptr)
+UnityEngine.UIElements.UIEventRegistration/<>c:<.cctor>b__1_2 (int,intptr)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'D:\Repos\Unity2D\AndroidTestProject\Temp\gradleOut\launcher\build.gradle' line: 3
+
+* What went wrong:
+A problem occurred evaluating project ':launcher'.
+> Uninitialized object exists on backward branch 45
+  Exception Details:
+    Location:
+      com/android/tools/build/jetifier/core/proguard/ProGuardTypesMap.<init>([Lkotlin/Pair;)V @101: goto
+    Reason:
+      Error exists in the bytecode
+    Bytecode:
+      0000000: 2b12 bfb8 008d 2a2b 4d3a 0d03 3e2c 3a04
+      0000010: bb00 2459 2cbe b700 2cc0 002e 3a05 0336
+      0000020: 0619 043a 0719 07be 3608 0336 0915 0915
+      0000030: 08a2 0037 1907 1509 323a 0a19 0519 0a3a
+      0000040: 0b3a 0e03 360c 190b b600 d419 0bb6 00d7
+      0000050: b800 b6b8 0065 3a0f 190e 190f b900 5902
+      0000060: 0057 8409 01a7 ffc8 1905 c000 5b3a 0e19
+      0000070: 0d19 0ec0 004e b800 6bb7 00b7 b1       
+    Stackmap Table:
+      full_frame(@45,{UninitializedThis,Object[#220],Object[#220],Integer,Object[#220],Object[#46],Integer,Object[#220],Integer,Integer,Top,Top,Top,UninitializedThis},{})
+      same_frame(@104)
+
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 6s
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.Android.GradleInvokationException:ParseAndShowException ()
+UnityEditor.Android.PostProcessor.PostProcessRunner:RunAllTasks (UnityEditor.Android.PostProcessor.PostProcessorContext)
+UnityEditor.Android.PostProcessAndroidPlayer:PostProcess (UnityEditor.BuildTarget,string,string,string,string,string,string,UnityEditor.BuildOptions,UnityEditor.RuntimeClassRegistry,UnityEditor.Build.Reporting.BuildReport)
+UnityEditor.Android.AndroidBuildPostprocessor:PostProcess (UnityEditor.Modules.BuildPostProcessArgs,UnityEditor.BuildProperties&)
+UnityEditor.PostprocessBuildPlayer:Postprocess (UnityEditor.BuildTargetGroup,UnityEditor.BuildTarget,string,string,string,int,int,UnityEditor.BuildOptions,UnityEditor.RuntimeClassRegistry,UnityEditor.Build.Reporting.BuildReport)
+UnityEditor.BuildPlayerWindow/DefaultBuildMethods:BuildPlayer (UnityEditor.BuildPlayerOptions)
+UnityEditor.BuildPlayerWindow:CallBuildMethods (bool,UnityEditor.BuildOptions)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun (bool)
+UnityEditor.BuildPlayerWindow:GUIBuildButtons (UnityEditor.Modules.IBuildWindowExtension,bool,bool,bool,UnityEditor.Build.BuildPlatform)
+UnityEditor.BuildPlayerWindow:ShowBuildTargetSettings ()
+UnityEditor.BuildPlayerWindow:OnGUI ()
+UnityEditor.HostView:InvokeOnGUI (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:DrawView (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:OldOnGUI ()
+UnityEngine.UIElements.IMGUIContainer:DoOnGUI (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,bool,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUIRaw (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUI (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleEvent (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.CallbackEventHandler:HandleEventAtTargetPhase (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.MouseCaptureDispatchingStrategy:DispatchEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ApplyDispatchingStrategies (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,bool)
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ProcessEventQueue ()
+UnityEngine.UIElements.EventDispatcher:OpenGate ()
+UnityEngine.UIElements.EventDispatcherGate:Dispose ()
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:Dispatch (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.BaseVisualElementPanel:SendEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.UIElementsUtility:DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel)
+UnityEngine.UIElements.UIElementsUtility:UnityEngine.UIElements.IUIElementsUtility.ProcessEvent (int,intptr,bool&)
+UnityEngine.UIElements.UIEventRegistration:ProcessEvent (int,intptr)
+UnityEngine.UIElements.UIEventRegistration/<>c:<.cctor>b__1_2 (int,intptr)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+CommandInvokationFailure: Gradle build failed. 
+C:\Program Files\Java\jdk1.8.0\bin\java.exe -classpath "D:\Program Files\Unity\2021.1.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\Tools\gradle\lib\gradle-launcher-6.1.1.jar" org.gradle.launcher.GradleMain "-Dorg.gradle.jvmargs=-Xmx4096m" "assembleRelease"
+
+stderr[
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'D:\Repos\Unity2D\AndroidTestProject\Temp\gradleOut\launcher\build.gradle' line: 3
+
+* What went wrong:
+A problem occurred evaluating project ':launcher'.
+> Uninitialized object exists on backward branch 45
+  Exception Details:
+    Location:
+      com/android/tools/build/jetifier/core/proguard/ProGuardTypesMap.<init>([Lkotlin/Pair;)V @101: goto
+    Reason:
+      Error exists in the bytecode
+    Bytecode:
+      0000000: 2b12 bfb8 008d 2a2b 4d3a 0d03 3e2c 3a04
+      0000010: bb00 2459 2cbe b700 2cc0 002e 3a05 0336
+      0000020: 0619 043a 0719 07be 3608 0336 0915 0915
+      0000030: 08a2 0037 1907 1509 323a 0a19 0519 0a3a
+      0000040: 0b3a 0e03 360c 190b b600 d419 0bb6 00d7
+      0000050: b800 b6b8 0065 3a0f 190e 190f b900 5902
+      0000060: 0057 8409 01a7 ffc8 1905 c000 5b3a 0e19
+      0000070: 0d19 0ec0 004e b800 6bb7 00b7 b1       
+    Stackmap Table:
+      full_frame(@45,{UninitializedThis,Object[#220],Object[#220],Integer,Object[#220],Object[#46],Integer,Object[#220],Integer,Integer,Top,Top,Top,UninitializedThis},{})
+      same_frame(@104)
+
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 6s
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+]
+stdout[
+Starting a Gradle Daemon, 1 incompatible and 2 stopped Daemons could not be reused, use --status for details
+
+> Configure project :launcher
+WARNING: The option setting 'android.enableR8=false' is deprecated.
+It will be removed in version 5.0 of the Android Gradle plugin.
+You will no longer be able to disable R8
+]
+exit code: 1
+  at UnityEditor.Android.Command.WaitForProgramToRun (UnityEditor.Utils.Program p, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) [0x00033] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.Command.Run (System.Diagnostics.ProcessStartInfo psi, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) [0x0002d] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.Command.Run (System.String command, System.String args, System.String workingdir, UnityEditor.Android.Command+WaitingForProcessToExit waitingForProcessToExit, System.String errorMsg) [0x0000a] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.AndroidJavaTools.RunJava (System.String args, System.String workingdir, System.Action`1[T] progress, System.String error) [0x0001f] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.GradleWrapper.Run (UnityEditor.Android.AndroidJavaTools javaTools, System.String workingdir, System.String task, System.Action`1[T] progress) [0x0002f] in <4e70902699e8473e826c832db8e97de1>:0 
+Rethrow as GradleInvokationException: Gradle build failed
+  at UnityEditor.Android.GradleWrapper.Run (UnityEditor.Android.AndroidJavaTools javaTools, System.String workingdir, System.String task, System.Action`1[T] progress) [0x00050] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.PostProcessor.Tasks.BuildGradleProject.Execute (UnityEditor.Android.PostProcessor.PostProcessorContext context) [0x000d1] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.PostProcessor.PostProcessRunner.RunAllTasks (UnityEditor.Android.PostProcessor.PostProcessorContext context) [0x00078] in <4e70902699e8473e826c832db8e97de1>:0 
+Rethrow as BuildFailedException: Exception of type 'UnityEditor.Build.BuildFailedException' was thrown.
+  at UnityEditor.Android.PostProcessor.CancelPostProcess.AbortBuild (System.String title, System.String message, System.Exception ex) [0x00020] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.PostProcessor.PostProcessRunner.RunAllTasks (UnityEditor.Android.PostProcessor.PostProcessorContext context) [0x0011a] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.PostProcessAndroidPlayer.PostProcess (UnityEditor.BuildTarget target, System.String stagingAreaData, System.String stagingArea, System.String playerPackage, System.String installPath, System.String companyName, System.String productName, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) [0x003ce] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.Android.AndroidBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) [0x00001] in <4e70902699e8473e826c832db8e97de1>:0 
+  at UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) [0x000dc] in <1daab1e8a63c4d30bee3bfa8949b8ee5>:0 
+UnityEditor.BuildPipeline:BuildPlayerInternalNoCheck(String[], String, String, BuildTargetGroup, BuildTarget, BuildOptions, String[], Boolean)
+UnityEditor.DefaultBuildMethods:BuildPlayer(BuildPlayerOptions)
+UnityEditor.BuildPlayerWindow:CallBuildMethods(Boolean, BuildOptions)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun(Boolean)
+UnityEditor.BuildPlayerWindow:GUIBuildButtons(IBuildWindowExtension, Boolean, Boolean, Boolean, BuildPlatform)
+UnityEditor.BuildPlayerWindow:ShowBuildTargetSettings()
+UnityEditor.BuildPlayerWindow:OnGUI()
+UnityEditor.HostView:InvokeOnGUI(Rect, Rect)
+UnityEditor.DockArea:DrawView(Rect, Rect)
+UnityEditor.DockArea:OldOnGUI()
+UnityEngine.UIElements.IMGUIContainer:DoOnGUI(Event, Matrix4x4, Rect, Boolean, Rect, Action, Boolean)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent(Event, Matrix4x4, Rect, Action, Boolean)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent(Event, Action, Boolean)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent(Event, Boolean)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUIRaw(EventBase, Boolean, Boolean)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUI(EventBase, Boolean, Boolean)
+UnityEngine.UIElements.IMGUIContainer:HandleEvent(EventBase)
+UnityEngine.UIElements.CallbackEventHandler:HandleEventAtTargetPhase(EventBase)
+UnityEngine.UIElements.MouseCaptureDispatchingStrategy:DispatchEvent(EventBase, IPanel)
+UnityEngine.UIElements.EventDispatcher:ApplyDispatchingStrategies(EventBase, IPanel, Boolean)
+UnityEngine.UIElements.EventDispatcher:ProcessEvent(EventBase, IPanel)
+UnityEngine.UIElements.EventDispatcher:ProcessEventQueue()
+UnityEngine.UIElements.EventDispatcher:OpenGate()
+UnityEngine.UIElements.EventDispatcherGate:Dispose()
+UnityEngine.UIElements.EventDispatcher:ProcessEvent(EventBase, IPanel)
+UnityEngine.UIElements.EventDispatcher:Dispatch(EventBase, IPanel, DispatchMode)
+UnityEngine.UIElements.BaseVisualElementPanel:SendEvent(EventBase, DispatchMode)
+UnityEngine.UIElements.UIElementsUtility:DoDispatch(BaseVisualElementPanel)
+UnityEngine.UIElements.UIElementsUtility:UnityEngine.UIElements.IUIElementsUtility.ProcessEvent(Int32, IntPtr, Boolean&)
+UnityEngine.UIElements.UIEventRegistration:ProcessEvent(Int32, IntPtr)
+UnityEngine.UIElements.<>c:<.cctor>b__1_2(Int32, IntPtr)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr, Boolean&)
+
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 161.9 MB.
+System memory in use after: 161.6 MB.
+
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 5283.
+Total: 376.520900 ms (FindLiveObjects: 0.399900 ms CreateObjectMapping: 0.088000 ms MarkObjects: 375.706300 ms  DeleteObjects: 0.325700 ms)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.343 ms
+	Integration:            118.620 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.009 ms
+	Total Operation Time:   118.973 ms
+System memory in use before: 160.9 MB.
+System memory in use after: 161.2 MB.
+
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 5281.
+Total: 370.934800 ms (FindLiveObjects: 0.367000 ms CreateObjectMapping: 0.090700 ms MarkObjects: 370.463500 ms  DeleteObjects: 0.012600 ms)
+
+Build completed with a result of 'Failed' in 47 seconds (47055 ms)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.BuildPlayerWindow/DefaultBuildMethods:BuildPlayer (UnityEditor.BuildPlayerOptions)
+UnityEditor.BuildPlayerWindow:CallBuildMethods (bool,UnityEditor.BuildOptions)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun (bool)
+UnityEditor.BuildPlayerWindow:GUIBuildButtons (UnityEditor.Modules.IBuildWindowExtension,bool,bool,bool,UnityEditor.Build.BuildPlatform)
+UnityEditor.BuildPlayerWindow:ShowBuildTargetSettings ()
+UnityEditor.BuildPlayerWindow:OnGUI ()
+UnityEditor.HostView:InvokeOnGUI (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:DrawView (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:OldOnGUI ()
+UnityEngine.UIElements.IMGUIContainer:DoOnGUI (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,bool,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUIRaw (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUI (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleEvent (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.CallbackEventHandler:HandleEventAtTargetPhase (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.MouseCaptureDispatchingStrategy:DispatchEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ApplyDispatchingStrategies (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,bool)
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ProcessEventQueue ()
+UnityEngine.UIElements.EventDispatcher:OpenGate ()
+UnityEngine.UIElements.EventDispatcherGate:Dispose ()
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:Dispatch (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.BaseVisualElementPanel:SendEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.UIElementsUtility:DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel)
+UnityEngine.UIElements.UIElementsUtility:UnityEngine.UIElements.IUIElementsUtility.ProcessEvent (int,intptr,bool&)
+UnityEngine.UIElements.UIEventRegistration:ProcessEvent (int,intptr)
+UnityEngine.UIElements.UIEventRegistration/<>c:<.cctor>b__1_2 (int,intptr)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+UnityEditor.BuildPlayerWindow+BuildMethodException: 4 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002ca] in <1daab1e8a63c4d30bee3bfa8949b8ee5>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <1daab1e8a63c4d30bee3bfa8949b8ee5>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.BuildPlayerWindow:CallBuildMethods (bool,UnityEditor.BuildOptions)
+UnityEditor.BuildPlayerWindow:BuildPlayerAndRun (bool)
+UnityEditor.BuildPlayerWindow:GUIBuildButtons (UnityEditor.Modules.IBuildWindowExtension,bool,bool,bool,UnityEditor.Build.BuildPlatform)
+UnityEditor.BuildPlayerWindow:ShowBuildTargetSettings ()
+UnityEditor.BuildPlayerWindow:OnGUI ()
+UnityEditor.HostView:InvokeOnGUI (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:DrawView (UnityEngine.Rect,UnityEngine.Rect)
+UnityEditor.DockArea:OldOnGUI ()
+UnityEngine.UIElements.IMGUIContainer:DoOnGUI (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,bool,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,UnityEngine.Matrix4x4,UnityEngine.Rect,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,System.Action,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleIMGUIEvent (UnityEngine.Event,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUIRaw (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:SendEventToIMGUI (UnityEngine.UIElements.EventBase,bool,bool)
+UnityEngine.UIElements.IMGUIContainer:HandleEvent (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.CallbackEventHandler:HandleEventAtTargetPhase (UnityEngine.UIElements.EventBase)
+UnityEngine.UIElements.MouseCaptureDispatchingStrategy:DispatchEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ApplyDispatchingStrategies (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,bool)
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:ProcessEventQueue ()
+UnityEngine.UIElements.EventDispatcher:OpenGate ()
+UnityEngine.UIElements.EventDispatcherGate:Dispose ()
+UnityEngine.UIElements.EventDispatcher:ProcessEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel)
+UnityEngine.UIElements.EventDispatcher:Dispatch (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.IPanel,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.BaseVisualElementPanel:SendEvent (UnityEngine.UIElements.EventBase,UnityEngine.UIElements.DispatchMode)
+UnityEngine.UIElements.UIElementsUtility:DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel)
+UnityEngine.UIElements.UIElementsUtility:UnityEngine.UIElements.IUIElementsUtility.ProcessEvent (int,intptr,bool&)
+UnityEngine.UIElements.UIEventRegistration:ProcessEvent (int,intptr)
+UnityEngine.UIElements.UIEventRegistration/<>c:<.cctor>b__1_2 (int,intptr)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+Refresh completed in 0.005373 seconds.
+RefreshInfo: RefreshV2(AllowForceSynchronousImport) scanfilter: 
+RefreshProfiler: Total: 5.046ms
+Refresh completed in 0.003374 seconds.
+RefreshInfo: RefreshV2(AllowForceSynchronousImport) scanfilter: 
+RefreshProfiler: Total: 2.607ms
